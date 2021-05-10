@@ -45,9 +45,11 @@ public class MainActivity extends FlutterActivity {
                   .addAction(R.mipmap.ic_launcher, "Decrease", getIntent(false));
 
                 notificationManager.notify(0, builder.build());
+                result.success(null);
             }
             if (call.method.equals("destroy")) {
                 notificationManager.cancel(0);
+                result.success(null);
             }
         });
     }
